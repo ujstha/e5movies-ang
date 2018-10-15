@@ -25,6 +25,7 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatSelectModule } from '@angular/material';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   {
@@ -59,7 +60,8 @@ const appRoutes: Routes = [
     MovieComponent,
     MovieDetailComponent,
     MovieCreateComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    NavbarComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
