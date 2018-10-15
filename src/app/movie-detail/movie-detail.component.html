@@ -1,0 +1,28 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/movies']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{movie.title}}</h2></mat-card-title>
+    <mat-card-subtitle>{{movie.storyline}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{movie.movie_poster}}" alt="{{movie.title}} image" width="80%" height="385">
+  <mat-card-content>
+    <dl>
+      <dt>Genre:</dt>
+      <dd>{{movie.genre}}</dd>
+      <dt>Cast:</dt>
+      <dd>{{movie.cast}}</dd>
+      <dt>Director:</dt>
+      <dd>{{movie.director}}</dd>
+      <dt>Release Date:</dt>
+      <dd>{{movie.release_date | date}}</dd>
+      <dt>Update Date:</dt>
+      <dd>{{movie.updated_date | date}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/movie-edit', movie._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteMovie(movie._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>
