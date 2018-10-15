@@ -1,35 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a routerLink="./"><img style="height: inherit;" src="../../assets/logo.jpg"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+  <a href="#"><img style="height: inherit;" src="../../assets/logo.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <button
-          mat-button routerLink="./"
-          routerLinkActive="active"
-        >
-          Home
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          mat-button routerLink="./movie-create"
-          routerLinkActive="active"
-        >
-          Create
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          mat-button routerLink="./movie-detail"
-          routerLinkActive="active"
-          disabled="true"
-        >
-          Details
-        </button>
-      </li>
-    </ul>
+  <div class="collapse navbar-collapse" style="margin-right: auto;" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    </div>
   </div>
 </nav>
