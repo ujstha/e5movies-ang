@@ -5,8 +5,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://e5movies:e5movies@ds127293.mlab.com:27293/e5moviesdb')
-  .then(() =>  console.log('Connection Succesful.....'))
+mongoose.connect('mongodb://e5movies:e5movies@ds127293.mlab.com:27293/e5moviesdb', { useNewUrlParser: true })
+  .then(() =>  console.log('Connection Succesful..... Visit localhost:3000'))
   .catch((err) => console.error(err));
 
 var apiRouter = require('./routes/movie');
@@ -16,11 +16,11 @@ var app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'dist/angular6cli')));
-app.use('/movies', express.static(path.join(__dirname, 'dist/angular6cli')));
-app.use('/movie-details/:id', express.static(path.join(__dirname, 'dist/angular6cli')));
-app.use('/movie-create', express.static(path.join(__dirname, 'dist/angular6cli')));
-app.use('/movie-edit/:id', express.static(path.join(__dirname, 'dist/angular6cli')));
+app.use(express.static(path.join(__dirname, 'dist/e5movies')));
+app.use('/movies', express.static(path.join(__dirname, 'dist/e5movies')));
+app.use('/movie-details/:id', express.static(path.join(__dirname, 'dist/e5movies')));
+app.use('/movie-create', express.static(path.join(__dirname, 'dist/e5movies')));
+app.use('/movie-edit/:id', express.static(path.join(__dirname, 'dist/e5movies')));
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
@@ -36,7 +36,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.send(err.status);
+  res.sendStatus(err.status);
 });
 
 module.exports = app;
