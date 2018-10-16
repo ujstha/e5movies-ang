@@ -1,3 +1,12 @@
+#detailWrapper {
+  max-width: 100%;
+  margin: 2% 5%;
+}
+
+.mat-card {
+  font-family: 'Krub', sans-serif;
+}
+
 .example-card {
   max-width: 500px;
 }

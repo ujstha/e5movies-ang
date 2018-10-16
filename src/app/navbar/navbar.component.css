@@ -1,10 +1,11 @@
-body {
-    margin: 0;
-    margin-bottom: 80px;
-    padding: 0;
-    padding-bottom: 80px;
+nav {
+    background-color: black;
 }
 .navbar a {
-    height: 50px; 
-    padding-left: 20px;
+    height: 40px;
+    padding-left: 15px;
+}
+.navbar img {
+    -webkit-filter: contrast(140%);
+    filter: contrast(140%);
 }

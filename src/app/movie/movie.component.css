@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Krub');
+
+#indexWrapper { 
+  max-width: 100%;
+  margin: 2% 5%;
+}
+
+.mat-table {
+  font-family: 'Krub', sans-serif;
+}
+
 .example-container {
   display: flex;
   flex-direction: column;

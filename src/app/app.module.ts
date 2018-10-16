@@ -26,6 +26,9 @@ import {
   MatNativeDateModule,
   MatSelectModule } from '@angular/material';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { TeammateComponent } from './teammate/teammate.component';
 
 const appRoutes: Routes = [
   {
@@ -48,6 +51,11 @@ const appRoutes: Routes = [
     component: MovieEditComponent,
     data: { title: 'Edit Movie' }
   },
+  {
+    path: 'aboutus',
+    component: AboutComponent,
+    data: { title: 'About Us' }
+  },
   { path: '',
     redirectTo: '/movies',
     pathMatch: 'full'
@@ -61,7 +69,10 @@ const appRoutes: Routes = [
     MovieDetailComponent,
     MovieCreateComponent,
     MovieEditComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    AboutComponent,
+    TeammateComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

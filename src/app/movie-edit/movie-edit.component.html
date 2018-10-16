@@ -1,0 +1,66 @@
+<div id="editWrapper">
+  <div class="button-row">
+    <a mat-raised-button color="primary" (click)="movieDetails()"><mat-icon>arrow_back</mat-icon></a>
+  </div>
+  <form [formGroup]="movieForm" (ngSubmit)="onFormSubmit(movieForm.value)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Title" formControlName="title"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('title').valid && movieForm.get('title').touched">Please enter a Movie Title</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Movie's Genre" formControlName="genre"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('genre').valid && movieForm.get('genre').touched">Please enter Movie's Genre</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Movie Poster Link" formControlName="movie_poster"
+              [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('movie_poster').valid && movieForm.get('movie_poster').touched">Please enter url to poster</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Cast" formControlName="cast"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('cast').valid && movieForm.get('cast').touched">Please enter Movie's Casts</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Storyline" formControlName="storyline"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('storyline').valid && movieForm.get('storyline').touched">Please enter a Storyline</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Director" formControlName="director"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('director').valid && movieForm.get('director').touched">Please enter Movie's Director Name</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Release Date (mm/dd/yyyy)" formControlName="release_date"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('release_date').valid && movieForm.get('release_date').touched">Please enter the Release Date</span>
+      </mat-error>
+    </mat-form-field>
+    
+    <div class="button-row">
+      <button type="submit" [disabled]="!movieForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+    </div>
+  </form>
+</div>
