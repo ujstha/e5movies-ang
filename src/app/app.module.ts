@@ -34,6 +34,11 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
+    path: 'indexs',
+    component: HomeComponent,
+    data: { title: 'Home' }
+  },
+  {
     path: 'movies',
     component: MovieComponent,
     data: { title: 'Movies List' }
@@ -59,7 +64,7 @@ const appRoutes: Routes = [
     data: { title: 'About Us' }
   },
   { path: '',
-    redirectTo: '/movies',
+    redirectTo: '/indexs',
     pathMatch: 'full'
   }
 ];

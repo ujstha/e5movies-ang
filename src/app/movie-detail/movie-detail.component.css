@@ -33,6 +33,10 @@
   margin: 10px 0;
 }
 
+.storyline {
+  padding: 18px;
+}
+
 @media only screen and (max-width: 600px) {
   #detailWrapper { 
     max-width: 100%;
