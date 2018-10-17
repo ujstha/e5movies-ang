@@ -29,6 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { TeammateComponent } from './teammate/teammate.component';
+import { MatVideoModule } from 'mat-video';
 
 const appRoutes: Routes = [
   {
@@ -93,7 +94,8 @@ const appRoutes: Routes = [
     MatMomentDateModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatVideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

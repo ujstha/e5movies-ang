@@ -12,7 +12,8 @@
     </mat-form-field>
     
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Movie Poster Link" formControlName="movie_poster"
+      <input matInput placeholder="Movie Poster Link" [(ngModel)]="image"
+            name="image" formControlName="movie_poster"
              [errorStateMatcher]="matcher">
       <mat-error>
         <span *ngIf="!movieForm.get('movie_poster').valid && movieForm.get('movie_poster').touched">Please insert url to movie poster</span>

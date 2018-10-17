@@ -2,26 +2,35 @@
 
 #indexWrapper { 
   max-width: 100%;
-  margin: 2% 5%;
+  margin: 2% 15%;
 }
 
-.mat-table {
+.mat-card {
+  margin-top: 2%;
   font-family: 'Krub', sans-serif;
+  padding: 12px;
 }
 
-.example-container {
-  display: flex;
-  flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
-  overflow: auto;
+.mat-card-content {
+  text-align: center;
 }
 
-.release_date-col {
-  flex: 0 0 100px !important;
-  white-space: unset !important;
+a {
+  text-decoration: none;
 }
 
-.button-row {
-  margin: 10px 0;
+.mat-card-header {
+  margin-top: 35px;
+}
+
+.mat-card-title a {
+  color: black;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  #indexWrapper { 
+    max-width: 100%;
+    margin: 2% 5%;
+  }
 }
