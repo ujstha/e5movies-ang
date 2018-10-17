@@ -1,16 +1,41 @@
 #detailWrapper {
   max-width: 100%;
-  margin: 2% 5%;
-}
-
-.mat-card {
+  margin: 2% 15%;
   font-family: 'Krub', sans-serif;
 }
 
+.mat-card {
+  max-width: 100%;
+  font-family: 'Krub', sans-serif;
+  margin-bottom: 3%;
+}
+
+.mat-card-content {
+  text-align: center;
+}
+
+.mat-card-content img {
+  -moz-box-shadow: 0 0 12px 6px #777;
+  -webkit-box-shadow: 0 0 12px 6px #777;
+  box-shadow: 0 0 12px 6px #777;
+}
+
 .example-card {
-  max-width: 500px;
+  max-width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 5px;
 }
 
 .button-row {
   margin: 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #detailWrapper { 
+    max-width: 100%;
+    margin: 2% 5%;
+  }
 }

@@ -1,0 +1,8 @@
+#aboutWrapper {
+    margin: 2% 5%;
+}
+.mat-card {
+    background-color: aliceblue;
+    font-size: 5px;
+    font-family: 'Krub', sans-serif;
+}

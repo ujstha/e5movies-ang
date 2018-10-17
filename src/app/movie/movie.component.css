@@ -8,11 +8,30 @@
 .mat-card {
   margin-top: 2%;
   font-family: 'Krub', sans-serif;
-  padding: 12px;
+  padding: 18px;
+}
+
+#movieInfo {
+  max-width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 5px;
+}
+
+#story {
+  margin-bottom: 3%;
 }
 
 .mat-card-content {
   text-align: center;
+}
+
+.mat-card-content a img {
+  -moz-box-shadow: 0 0 12px 6px #777;
+  -webkit-box-shadow: 0 0 12px 6px #777;
+  box-shadow: 0 0 12px 6px #777;
 }
 
 a {
@@ -20,7 +39,7 @@ a {
 }
 
 .mat-card-header {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .mat-card-title a {

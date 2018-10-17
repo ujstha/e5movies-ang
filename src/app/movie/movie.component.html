@@ -4,26 +4,26 @@
   </div>
   <!--if there is data-->
   <div *ngIf="movies" class="home-page">  
-    <div class="mat-card">
+    <div id="movieInfo">
       <div *ngFor="let movie of movies;">
         <mat-card-header>
           <mat-card-title>
               <a class="text-capitalize" routerLink="/movie-details/{{movie._id}}">
-                {{movie.title}}
+                {{movie.title}} &nbsp;<small>({{movie.release_date | date: 'yyyy'}})</small>
               </a>
           </mat-card-title>
           <mat-card-subtitle>
-            {{movie.genre}}
+            Posted on {{movie.updated_date | date}} &nbsp;|&nbsp; {{movie.genre}}
           </mat-card-subtitle>
         </mat-card-header>
   
         <mat-card-content>
           <a routerLink="/movie-details/{{movie._id}}">
-            <img src="{{movie.movie_poster}}" alt="{{movie.title}} image" height="385" width="280">
+            <img src="{{movie.movie_poster}}" alt="{{movie.title}} image" width="280px" height="385px">
           </a>
         </mat-card-content>
         
-        <mat-card>
+        <mat-card id="story">
           {{movie.storyline}}
         </mat-card>
       </div>
