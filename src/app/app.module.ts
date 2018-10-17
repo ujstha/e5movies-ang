@@ -30,6 +30,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { TeammateComponent } from './teammate/teammate.component';
 import { MatVideoModule } from 'mat-video';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
@@ -73,7 +74,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     FooterComponent,
     AboutComponent,
-    TeammateComponent
+    TeammateComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
