@@ -5,7 +5,11 @@
   <!--if there is data-->
   <div *ngIf="movies" class="home-page">  
     <div id="movieInfo">
-      <div *ngFor="let movie of movies;">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search By Movie Title"
+              style="width:300px" [(ngModel)]="searchTerm" />
+      </div>
+      <div *ngFor="let movie of movies | movieFilter:searchTerm">
         <mat-card-header>
           <mat-card-title>
               <a class="text-capitalize" routerLink="/movie-details/{{movie._id}}">

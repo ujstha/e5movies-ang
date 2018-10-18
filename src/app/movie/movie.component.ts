@@ -14,6 +14,7 @@ export class MovieComponent implements OnInit {
   movies: any;
   displayedColumns = ['title', 'cast', 'release_date'];
   dataSource = new MovieDataSource(this.api);
+  searchTerm: string;
 
   constructor(private api: ApiService) { }
 

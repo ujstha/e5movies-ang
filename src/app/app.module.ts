@@ -31,6 +31,7 @@ import { AboutComponent } from './about/about.component';
 import { TeammateComponent } from './teammate/teammate.component';
 import { MatVideoModule } from 'mat-video';
 import { HomeComponent } from './home/home.component';
+import { MovieFilterPipe } from './movie-filter.pipe';
 
 const appRoutes: Routes = [
   {
@@ -80,7 +81,8 @@ const appRoutes: Routes = [
     FooterComponent,
     AboutComponent,
     TeammateComponent,
-    HomeComponent
+    HomeComponent,
+    MovieFilterPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
