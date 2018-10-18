@@ -30,6 +30,12 @@
 }
 
 .detailDiv {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal {
+  width: 100%;
   max-width: 100%;
 }
 
