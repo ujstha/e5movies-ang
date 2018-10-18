@@ -29,6 +29,10 @@
   padding: 5px;
 }
 
+.detailDiv {
+  max-width: 100%;
+}
+
 .button-row {
   margin: 10px 0;
 }
