@@ -20,6 +20,11 @@
   padding: 5px;
 }
 
+#searchForm {
+  max-width: 100%;
+  text-align: center;
+}
+
 #story {
   margin-bottom: 3%;
 }
