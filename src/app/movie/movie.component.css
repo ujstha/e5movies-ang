@@ -20,9 +20,13 @@
   padding: 5px;
 }
 
-.form-group {
+#searchForm {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.form-group {
+  text-align: center;
 }
 
 #story {
