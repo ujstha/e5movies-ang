@@ -35,7 +35,7 @@ import { MovieFilterPipe } from './movie-filter.pipe';
 
 const appRoutes: Routes = [
   {
-    path: '/',
+    path: 'home',
     component: HomeComponent,
     data: { title: 'Home' }
   },
@@ -65,7 +65,7 @@ const appRoutes: Routes = [
     data: { title: 'About Us' }
   },
   { path: '',
-    redirectTo: '/',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
