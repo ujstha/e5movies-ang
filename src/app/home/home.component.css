@@ -1,8 +1,8 @@
 .carousel-item img {
     width: 100%;
     max-width: 100%;
-    height: 650px;
-    max-height: 650px;
+    height: 647px;
+    max-height: 647px;
 }
 
 @media only screen and (max-width: 600px) {

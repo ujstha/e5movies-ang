@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FileUploader } from 'ng2-file-upload';
+
+const URL = 'https://e5movies.herokuapp.com/api/';
 
 @Component({
   selector: 'app-movie-create',
@@ -20,6 +23,7 @@ export class MovieCreateComponent implements OnInit {
   cast:string='';
   director:string='';
   release_date: Date;
+  public uploader: FileUploader = new FileUploader({url: URL});
 
   constructor(private router: Router, private api: ApiService, private formBuilder: FormBuilder) { }
 
@@ -31,7 +35,8 @@ export class MovieCreateComponent implements OnInit {
       'storyline' : [null, Validators.required],
       'cast' : [null, Validators.required],
       'director' : [null, Validators.required],
-      'release_date' : [null, Validators.required]
+      'release_date' : [null, Validators.required],
+      'image' : [null, Validators.required]
     });
   }
 

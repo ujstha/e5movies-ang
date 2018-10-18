@@ -61,7 +61,15 @@
         <span *ngIf="!movieForm.get('release_date').valid && movieForm.get('release_date').touched">Please enter the Release Date</span>
       </mat-error>
     </mat-form-field>
-  
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Image" formControlName="image" type="file" ng2FileSelect [uploader]="uploader"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!movieForm.get('image').valid && movieForm.get('image').touched">Please enter Movie's Image</span>
+      </mat-error>
+    </mat-form-field>
+    
     <div class="button-row">
       <button type="submit" [disabled]="!movieForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
     </div>
