@@ -14,7 +14,7 @@ export class MovieEditComponent implements OnInit {
   id:string = '';
   title:string = '';
   genre: string[] = [' Action', ' Adventure ', ' Animation ', ' Biography ', ' Comedy ', ' Documentary ',
-                     ' Drama ', ' Family ', ' Fantasy ', ' History ', ' Horror ', ' Mystery ', ' Romance ',
+                     ' Drama ', ' Family ', ' Fantasy ', ' History ', ' Horror ', ' Mystery ', 'Musical', 'Music', ' Romance ',
                      ' Sci-Fi ', ' Thriller '];
   movie_poster:string = '';
   storyline:string = '';
