@@ -20,7 +20,7 @@
         <mat-card>
             <div>
                 <div class="detailDiv">
-                    <h5><b>Image URL : </b><small><a href="{{movie.movie_poster}}" target="_blank" style="text-decoration: none;">{{movie.title}} image</a></small></h5>
+                    <h5><b>Image URL : </b><small><a data-toggle="modal" data-target="#imageModal" style="text-decoration: none;">{{movie.title}} image</a></small></h5>
                 </div>
                 <div class="detailDiv">
                         <h5><b>Genre : </b><small>{{movie.genre}}</small></h5>
@@ -39,12 +39,28 @@
                 </div>
             </div>
         </mat-card>
+        <!-- Modal for full size image-->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Full Screen for {{movie.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{movie.movie_poster}}" width="100%" height="auto" />
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal-footer" style="border: none; padding-right: 0;">
             <a mat-raised-button color="primary" [routerLink]="['/movie-edit', movie._id]"><mat-icon>edit</mat-icon></a>
             <a mat-raised-button color="warn" data-toggle="modal" data-target="#deleteModal"><mat-icon>delete</mat-icon></a>
         </div>
     </div>
-    <!-- Modal -->
+    <!-- Modal for delete confirmation -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
