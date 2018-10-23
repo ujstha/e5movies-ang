@@ -12,7 +12,7 @@
             </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <img src="{{movie.movie_poster}}" alt="{{movie.title}} image" width="285px" height="385px">
+            <img src="{{movie.movie_poster}}" data-toggle="modal" data-target="#imageModal" alt="{{movie.title}} image" width="285px" height="385px">
         </mat-card-content>
         <mat-card class="storyline">
             {{movie.storyline}}
@@ -39,25 +39,20 @@
                 </div>
             </div>
         </mat-card>
-        <!-- Modal for full size image-->
-        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="imageModalLabel">Full Screen for {{movie.title}}</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="{{movie.movie_poster}}" width="100%" height="auto" />
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="modal-footer" style="border: none; padding-right: 0;">
             <a mat-raised-button color="primary" [routerLink]="['/movie-edit', movie._id]"><mat-icon>edit</mat-icon></a>
             <a mat-raised-button color="warn" data-toggle="modal" data-target="#deleteModal"><mat-icon>delete</mat-icon></a>
+        </div>
+        <!-- Modal for full screen image -->
+        <div id="fullImage">
+            <div class="modal" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <img class="modal-content" src="{{movie.movie_poster}}" >
+                </div>
+            </div>
         </div>
     </div>
     <!-- Modal for delete confirmation -->
